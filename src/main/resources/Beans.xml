@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="specialMessage" class="java.lang.String">
+        <constructor-arg value="borkydog1" />
+    </bean>
+    <bean id="specialMessage2" class="java.lang.String">
+        <constructor-arg value="borkypupper1" />
+    </bean>
+    <bean id="doggo2" class="Doggo" scope="prototype">
+        <property name="name" ref="specialMessage" />
+        <property name="age" value="5" />
+    </bean>
+    <bean id="pupper2" class="Pupper" scope="prototype">
+        <property name="name" ref="specialMessage2" />
+        <property name="age" value="1" />
+    </bean>
+</beans>
